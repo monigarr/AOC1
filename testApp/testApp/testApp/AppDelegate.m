@@ -22,6 +22,7 @@
     
     //Start Monica's Code
     
+    
     // This is my story and I'm sticking to it.
     // It's all true too.
     // Once upon a time a puppy named Niionhontesha
@@ -37,7 +38,7 @@
     float chickenLegs = 5.7f;
     int snakeHissAtPuppy = 0;
     int puppyRollsOnSnake = 1;
-    int snakeLives = 20;
+    int snakeLives = 5;
     NSArray *loadStory = [NSArray arrayWithObjects: @"Puppy snack stash has Chicken legs", @"A grass snake wants to steal from Puppy's snack stash", @"If Puppy's snack stash disappears, the Puppy will eat the Snake.", nil];
     
     // perform AND, OR comparison. use float, int, bool.
@@ -52,8 +53,9 @@
             {
                 NSLog(@"A Snake stole a Chicken Leg from Puppy's Snack Stash.");
                 chickenLegs--;
+                snakeLives--;
             }
-        else if (randomNum < 0)
+        else if (randomNum < 1)
         {
             NSLog(@"No More Chicken Legs! Puppy eats Snake!");
             snakeLives = 0;
@@ -74,17 +76,20 @@
                 NSLog(@"bah dump, Bah Dump, BAH DUMP!");
                 NSLog(@"Puppy catches the Snake stealing Chicken Legs!");
                 isSnakeStealing = YES;
+                snakeLives--;
             }
         else if (chickenLegs == snakeLives)
             {
                 isPuppyGuarding = YES;
                 snakeHissAtPuppy = 2;
                 NSLog((@"Monica saved Snake from death by Puppy Rolling & Crushing. Snake hissed: %c. Puppy is Guarding her snack stash: %c"), isPuppyGuarding, snakeHissAtPuppy);
+                snakeLives--;
             }
         else 
             {
                 puppyRollsOnSnake = 1;
                 NSLog(@"Puppy rolls on top of Snake, causing Snake to slither away in shock.");
+                snakeLives--;
             }
     }//while loop
             
@@ -103,38 +108,39 @@
                 
                     if (i == chickenLegs)
                     {
-                        NSLog(@"Puppy has %.3f Chicken legs left in her stash. Monica needs to give puppy %d more Chicken leg.", chickenLegs, (int)chickenLegs + 1);
+                        NSLog(@"Puppy has %.3f Chicken legs left in her stash. Give puppy %d more Chicken leg.", chickenLegs, (int)chickenLegs + 1);
                     }
-                    NSLog(@"");
                     NSLog(@"Puppy stashed %d Chicken Legs", i);
                 }
             }
     
     if (isPuppyGuarding & !isSnakeStealing)
     {
-        NSLog(@"Puppy is happy with her snack stash and the Snake is not stealing Chicken Legs");
+        NSLog(@"Puppy is happy with her stash of Chicken legs.");
     }
     else if(isPuppyGuarding && isSnakeStealing)
     {
         NSLog(@"Puppy and Snake are going to fight");
         snakeLives--;
     }
-    else if (snakeLives > 1)
+    else if (snakeLives == 0)
     {
         NSLog(@"Puppy has no snack stash. Puppy ate the Snake.");
     }
     
     else
     {
-          NSLog(@"This is my story and I'm sticking to it");  
+        NSLog(@"This is my story and I'm sticking to it");  
+        for (int story = chickenLegs; story > 0; story--)
+        {
+            NSLog(@"Chicken Leg total: %d", story);
+            if (snakeLives == 0)
+            {
+                NSLog(@"That's all folks.");
+            }
+        }
     }
 
-    for (int story = chickenLegs; story > 0; story--)
-    {
-        NSLog(@"Chicken Leg total: %d", story);
-    }
-    
-    NSLog(@"That's all folks");
     
     return YES; 
 }
