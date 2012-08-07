@@ -155,7 +155,7 @@
     
     //END AOC1 WEEK 2 PROJECT 2//
     
-    //[super viewDidLoad];
+    [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
 }
