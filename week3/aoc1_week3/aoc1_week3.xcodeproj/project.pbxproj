@@ -23,13 +23,13 @@
 		510CF2C315CEF95D008AEF8F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		510CF2C515CEF95D008AEF8F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		510CF2C715CEF95D008AEF8F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		510CF2CB15CEF95D008AEF8F /* aoc1_week3-Info.plist */ = {isa = PBXFileReference; path = "aoc1_week3-Info.plist"; sourceTree = "<group>"; };
+		510CF2CB15CEF95D008AEF8F /* aoc1_week3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "aoc1_week3-Info.plist"; sourceTree = "<group>"; };
 		510CF2CD15CEF95D008AEF8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		510CF2CF15CEF95D008AEF8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		510CF2D115CEF95D008AEF8F /* aoc1_week3-Prefix.pch */ = {isa = PBXFileReference; path = "aoc1_week3-Prefix.pch"; sourceTree = "<group>"; };
-		510CF2D215CEF95D008AEF8F /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		510CF2D115CEF95D008AEF8F /* aoc1_week3-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "aoc1_week3-Prefix.pch"; sourceTree = "<group>"; };
+		510CF2D215CEF95D008AEF8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		510CF2D315CEF95D008AEF8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		510CF2D515CEF95D008AEF8F /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		510CF2D515CEF95D008AEF8F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		510CF2D615CEF95D008AEF8F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		510CF2D915CEF95D008AEF8F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		510CF2DC15CEF95D008AEF8F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };

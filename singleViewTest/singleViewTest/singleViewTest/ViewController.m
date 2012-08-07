@@ -17,114 +17,125 @@
 - (void)viewDidLoad
 {
     
-    self.view.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor purpleColor];
     
     //TITLE//
-    booktitle = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 300, 40)];
-    if (booktitle != nil)
+    //center, contrasting background color and font color//
+    bookTitle = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 300, 40)];
+    if (bookTitle != nil)
     {
-        booktitle.textAlignment = UITextAlignmentCenter;
-        booktitle.textColor = [UIColor whiteColor];
-        booktitle.backgroundColor = [UIColor redColor];
-        booktitle.text = @"Objective-C Programming.";
+        bookTitle.textAlignment = UITextAlignmentCenter;
+        bookTitle.textColor = [UIColor whiteColor];
+        bookTitle.backgroundColor = [UIColor redColor];
+        bookTitle.text = @"Objective-C Programming.";
     }
-    [self.view addSubview: booktitle];
+    [self.view addSubview: bookTitle];
 
     //AUTHOR//
-    author = [[UILabel alloc] initWithFrame:CGRectMake(10, 70, 100, 25)];
-    if (author != nil)
+    //right aligned, contrasting background color and font color//
+    authorLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 70, 100, 25)];
+    if (authorLabel != nil)
     {
-        author.textAlignment = UITextAlignmentRight;
-        author.textColor = [UIColor whiteColor];
-        author.backgroundColor = [UIColor cyanColor];
-        author.text = @"author:";
+        authorLabel.textAlignment = UITextAlignmentRight;
+        authorLabel.textColor = [UIColor blueColor];
+        authorLabel.backgroundColor = [UIColor cyanColor];
+        authorLabel.text = @"author: ";
     }
-    [self.view addSubview: author];
+    [self.view addSubview: authorLabel];
     
     //AUTHOR NAME//
-    authorname = [[UILabel alloc] initWithFrame:CGRectMake(110, 70, 320, 25)];
-    if (authorname != nil)
+    //left aligned, contrasting background color and font color//
+    authorName = [[UILabel alloc] initWithFrame:CGRectMake(110, 70, 320, 25)];
+    if (authorName != nil)
     {
-        authorname.textAlignment = UITextAlignmentLeft;
-        authorname.textColor = [UIColor cyanColor];
-        authorname.backgroundColor = [UIColor whiteColor];
-        authorname.text = @"Aaron Hillegass";
+        authorName.textAlignment = UITextAlignmentLeft;
+        authorName.textColor = [UIColor cyanColor];
+        authorName.backgroundColor = [UIColor blueColor];
+        authorName.text = @" Aaron Hillegass";
     }
-    [self.view addSubview: authorname];
+    [self.view addSubview: authorName];
     
     //PUBLISHED//
-    published = [[UILabel alloc] initWithFrame:CGRectMake(10, 110, 100, 25)];
-    if (published != nil)
+    //right aligned, contrasting background color and font color//
+    publishedLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 110, 100, 25)];
+    if (publishedLabel != nil)
     {
-        published.textAlignment = UITextAlignmentRight;
-        published.textColor = [UIColor blueColor];
-        published.backgroundColor = [UIColor yellowColor];
-        published.text = @"published";
-        [self.view addSubview: published];
+        publishedLabel.textAlignment = UITextAlignmentRight;
+        publishedLabel.textColor = [UIColor blueColor];
+        publishedLabel.backgroundColor = [UIColor yellowColor];
+        publishedLabel.text = @"published: ";
+        [self.view addSubview: publishedLabel];
     }
     
     //PUBLISHED DATE//
-    publishdate = [[UILabel alloc] initWithFrame:CGRectMake(110, 110, 140, 25)];
-    if (publishdate != nil)
+    //left aligned, contrasting background color and font color//
+    publishDate = [[UILabel alloc] initWithFrame:CGRectMake(110, 110, 140, 25)];
+    if (publishDate != nil)
     {
-        publishdate.textAlignment = UITextAlignmentLeft;
-        publishdate.textColor = [UIColor yellowColor];
-        publishdate.backgroundColor = [UIColor blueColor];
-        publishdate.text = @"2012";
+        publishDate.textAlignment = UITextAlignmentLeft;
+        publishDate.textColor = [UIColor yellowColor];
+        publishDate.backgroundColor = [UIColor blueColor];
+        publishDate.text = @" 2012";
     }
-    [self.view addSubview: publishdate];
+    [self.view addSubview: publishDate];
     
     //SUMMARY//
-    summary = [[UILabel alloc] initWithFrame:CGRectMake(10, 150, 100, 25)];
-    if (summary != nil)
+    //left aligned, contrasting background color and font color//
+    summaryLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 150, 100, 25)];
+    if (summaryLabel != nil)
     {
         
-        summary.textAlignment = UITextAlignmentLeft;
-        summary.textColor = [UIColor greenColor];
-        summary.backgroundColor = [UIColor orangeColor];
-        summary.text = @"summary:";
+        summaryLabel.textAlignment = UITextAlignmentLeft;
+        summaryLabel.textColor = [UIColor greenColor];
+        summaryLabel.backgroundColor = [UIColor orangeColor];
+        summaryLabel.text = @"summary: ";
     }
-    [self.view addSubview: summary];
+    [self.view addSubview: summaryLabel];
     
-    summarytext = [[UILabel alloc] initWithFrame:CGRectMake(10, 175, 300, 150)];
-    if (summarytext != nil)
+    //SUMMARY TEXT//
+    //center aligned, contrasting background color and font color//
+    //My own actual summary based on what I read in the book.
+    summaryText = [[UILabel alloc] initWithFrame:CGRectMake(10, 175, 300, 150)];
+    if (summaryText != nil)
     {
-        summarytext.textAlignment = UITextAlignmentCenter;
-        summarytext.textColor = [UIColor brownColor];
-        summarytext.backgroundColor = [UIColor whiteColor];
-        summarytext.numberOfLines = 4;
-        summarytext.text = @"Want to write applications for iOS or the Mac?  This intro to programming and the Objective-C language is the first step.";
+        summaryText.textAlignment = UITextAlignmentCenter;
+        summaryText.textColor = [UIColor orangeColor];
+        summaryText.backgroundColor = [UIColor greenColor];
+        summaryText.numberOfLines = 4;
+        summaryText.text = @"I've only read Chapters 1 to 5 so far. This book is a great into to learning to write apps for iOS and Mac with Objective-C programming language.";
     }
-    [self.view addSubview: summarytext];
+    [self.view addSubview: summaryText];
     
     //LIST OF ITEMS//
-    listofitems = [[UILabel alloc] initWithFrame:CGRectMake(10, 355, 150, 25)];
-    if (listofitems != nil)
+    listOfItemsLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 355, 150, 25)];
+    if (listOfItemsLabel != nil)
     {
-        listofitems.textAlignment = UITextAlignmentLeft;
-        listofitems.textColor = [UIColor greenColor];
-        listofitems.backgroundColor = [UIColor purpleColor];
-        listofitems.text = @"List of Items";
+        listOfItemsLabel.textAlignment = UITextAlignmentLeft;
+        listOfItemsLabel.textColor = [UIColor greenColor];
+        listOfItemsLabel.backgroundColor = [UIColor blueColor];
+        listOfItemsLabel.text = @"List of Items: ";
     }
-    [self.view addSubview: listofitems];
+    [self.view addSubview: listOfItemsLabel];
     
     //LIST OF ITEMS CONTENT//
+    // allocate and initialize NSArray //
+    // add items to the array //
     NSArray *itemsArray = [[NSArray alloc] initWithObjects:@"variables",@"if/else",@"functions",@"numbers",@"loops", nil];
     
     NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithArray:itemsArray];
     
-    listofitemscontent = [[UILabel alloc] initWithFrame:CGRectMake(10, 380, 300, 50)];
+    listOfItemsContent = [[UILabel alloc] initWithFrame:CGRectMake(10, 380, 300, 50)];
     
-    if (listofitemscontent != nil)
+    if (listOfItemsContent != nil)
     {
-        listofitemscontent.textColor = [UIColor whiteColor];
-        listofitemscontent.backgroundColor = [UIColor blackColor];
-        listofitemscontent.textAlignment = UITextAlignmentCenter;
-        listofitemscontent.numberOfLines = 5;
-        listofitemscontent.text = [NSString stringWithFormat:@"%@, %@, %@, %@, and %@", [mutableArray objectAtIndex:0], [mutableArray objectAtIndex:1], [mutableArray objectAtIndex:2], [mutableArray objectAtIndex:3], [mutableArray objectAtIndex:4] ];
+        listOfItemsContent.textColor = [UIColor blueColor];
+        listOfItemsContent.backgroundColor = [UIColor greenColor];
+        listOfItemsContent.textAlignment = UITextAlignmentCenter;
+        listOfItemsContent.numberOfLines = 5;
+        listOfItemsContent.text = [NSString stringWithFormat:@"%@, %@, %@, %@, and %@", [mutableArray objectAtIndex:0], [mutableArray objectAtIndex:1], [mutableArray objectAtIndex:2], [mutableArray objectAtIndex:3], [mutableArray objectAtIndex:4] ];
         
     }
-    [self.view addSubview: listofitemscontent];
+    [self.view addSubview: listOfItemsContent];
     
     
     [super viewDidLoad];

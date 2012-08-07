@@ -10,4 +10,10 @@
 
 @interface ViewController : UIViewController
 
+    -(int)add:(int)number1 with:(int)number2;
+    -(BOOL)compare:(int)number1 with:(int)number2;
+    -(NSString*)append:(NSString*)string1 with:(NSString*)string2;
+    -(void)displayAlertWithString:(NSString*)string;
+    -(int)sum;
+
 @end

@@ -10,15 +10,17 @@
 
 @interface ViewController : UIViewController
 {
-    UILabel *booktitle;
-    UILabel *author;
-    UILabel *authorname;
-    UILabel *published;
-    UILabel *publishdate;
-    UILabel *summary;
-    UILabel *summarytext;
-    UILabel *listofitems;
-    UILabel *listofitemscontent;    
+    //meaningful detailed method names following iOS Conventions
+    //methodName or thisIsAMethodName
+    UILabel *bookTitle;
+    UILabel *authorLabel;
+    UILabel *authorName;
+    UILabel *publishedLabel;
+    UILabel *publishDate;
+    UILabel *summaryLabel;
+    UILabel *summaryText;
+    UILabel *listOfItemsLabel;
+    UILabel *listOfItemsContent;    
 }
 
 @end
