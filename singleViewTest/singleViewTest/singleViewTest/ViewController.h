@@ -12,15 +12,8 @@
 {
     //meaningful detailed method names following iOS Conventions
     //methodName or thisIsAMethodName
-    UILabel *bookTitle;
-    UILabel *authorLabel;
-    UILabel *authorName;
-    UILabel *publishedLabel;
-    UILabel *publishDate;
-    UILabel *summaryLabel;
-    UILabel *summaryText;
-    UILabel *listOfItemsLabel;
-    UILabel *listOfItemsContent;    
+    UILabel *bookTitle, *authorLabel, *authorName, *publishedLabel, *publishDate, *summaryLabel, *summaryText, *listOfItemsLabel, *listOfItemsContent;
+    NSMutableString *mutableArray;
 }
 
 @end

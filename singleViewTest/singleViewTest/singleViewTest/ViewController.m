@@ -122,7 +122,23 @@
     // add items to the array //
     NSArray *itemsArray = [[NSArray alloc] initWithObjects:@"variables",@"if/else",@"functions",@"numbers",@"loops", nil];
     
-    NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithArray:itemsArray];
+    //NSMutableString
+    NSMutableString *mutableStringList = [[NSMutableString alloc] init];
+    
+    //Loop through NSArray and append to NSMutableString    
+    for (int i=0; i < [itemsArray count]; i++)
+    {
+        NSString *listEachItem = [itemsArray objectAtIndex:i];
+        
+        // If it's the last item, format doesn't include ","
+        if ([itemsArray count] == i+1){
+            [mutableStringList appendString:[[NSString alloc] initWithFormat:@"%@", listEachItem]];
+            
+            // Separate all items with a ", "
+        } else {
+            [mutableStringList appendString:[[NSString alloc] initWithFormat:@"%@, ", listEachItem]];
+        }
+    }
     
     listOfItemsContent = [[UILabel alloc] initWithFrame:CGRectMake(10, 380, 300, 50)];
     
@@ -132,13 +148,14 @@
         listOfItemsContent.backgroundColor = [UIColor greenColor];
         listOfItemsContent.textAlignment = UITextAlignmentCenter;
         listOfItemsContent.numberOfLines = 5;
-        listOfItemsContent.text = [NSString stringWithFormat:@"%@, %@, %@, %@, and %@", [mutableArray objectAtIndex:0], [mutableArray objectAtIndex:1], [mutableArray objectAtIndex:2], [mutableArray objectAtIndex:3], [mutableArray objectAtIndex:4] ];
+        listOfItemsContent.text = mutableStringList;
         
     }
     [self.view addSubview: listOfItemsContent];
     
+    //END AOC1 WEEK 2 PROJECT 2//
     
-    [super viewDidLoad];
+    //[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
 }
